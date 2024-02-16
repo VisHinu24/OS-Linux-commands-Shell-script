@@ -72,6 +72,15 @@ file1 file2 differ: char 1, line 1
 comm file1 file2
  ## OUTPUT
 ```
+localhost:~# comm file1 file2
+        anil aggarwal
+        barun sengupta
+        c.k. shukla
+chanchal singhvi
+c.k. shukla
+        lalit chowdury
+                s.n. dasgupta
+sumit chakrobarty
 ```
 diff file1 file2
 ## OUTPUT
@@ -210,25 +219,33 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
-
-
+```
+localhost:~# egrep -w 'Hello|hello' newfile.txt
+Hello world
+hello world
+```
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
-
+```
+localhost:~# egrep -w '(H|h)ello' newfile.txt
+Hello world
+hello world
+```
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
-
-
+```
+localhost:~# egrep -w '(H|h)ell[a-z]' newfile.txt
+Hello world
+hello world
+```
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
-
-
+```
+localhost:~# egrep '(^hello)' newfile.txt
+hello world
+```
 egrep '(world$)' newfile 
 ## OUTPUT
 
