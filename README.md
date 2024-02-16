@@ -42,34 +42,41 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
+..............................................
 localhost:~# cat <file1
 chanchal singhvi
 c.k. shukla
 s.n. dasgupta
 sumit chakrobarty
-
+..............................................
 
 cat < file2
 ## OUTPUT
+..............................................
 localhost:~# cat <file2
 anil aggarwal
 barun sengupta
 c.k. shukla
 lalit chowdury
 s.n. dasgupta
-
+..............................................
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
-comm file1 file2
- ## OUTPUT
+..............................................
 cmp file1 file2
 file1 file2 differ: char 1, line 1
- 
+..............................................
+comm file1 file2
+ ## OUTPUT
+ ..............................................
+cmp file1 file2
+file1 file2 differ: char 1, line 1
+ ..............................................
 diff file1 file2
 ## OUTPUT
+..............................................
 localhost:~# diff file1 file2
 --- file1
 +++ file2
@@ -81,7 +88,7 @@ localhost:~# diff file1 file2
 +lalit chowdury
  s.n. dasgupta
 -sumit chakrobarty
-
+..............................................
 #Filters
 
 ### Create the following files file11, file22 as follows:
@@ -103,27 +110,31 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
+..............................................
 localhost:~# cut -c1-3 file11
 Hel
 Thi
+..............................................
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
+..............................................
 localhost:~# cut -d "|" -f 1 file22.txt
 1001
 1002
 1003
-
+..............................................
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+..............................................
 localhost:~# cut -d "|" -f 2 file22.txt
  Ram
  tom
  Joe
-
+..............................................
 cat < newfile 
 ```
 Hello world
@@ -136,37 +147,42 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
+..............................................
 localhost:~# grep Hello newfile
 Hello world
-
+..............................................
 
 grep hello newfile 
 ## OUTPUT
+..............................................
 localhost:~# grep hello newfile
 hello world
-
+..............................................
 
 
 grep -v hello newfile 
 ## OUTPUT
+..............................................
 localhost:~# grep -v hello newfile
 Hello world
-
+..............................................
 
 cat newfile | grep -i "hello"
 ## OUTPUT
+..............................................
 localhost:~# cat newfile | grep -i "hello"
 Hello world
 hello world
-
+..............................................
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
+..............................................
 localhost:~# cat newfile | grep -i -c "hello"
 2
-
+..............................................
 
 
 
