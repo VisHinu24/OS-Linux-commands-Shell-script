@@ -183,14 +183,6 @@ cat newfile | grep -i -c "hello"
 localhost:~# cat newfile | grep -i -c "hello"
 2
 ..............................................
-
-
-
-grep -R ubuntu /etc
-## OUTPUT
-
-
-
 grep -w -n world newfile   
 ## OUTPUT
 
