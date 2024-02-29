@@ -248,39 +248,70 @@ hello world
 ```
 egrep '(world$)' newfile 
 ## OUTPUT
-
+```
+localhost:~# egrep '(world$)' newfile.txt
+Hello world
+hello world
+```
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
+localhost:~# egrep '(World$)' newfile.txt
+Linux is best in this World
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+```
+localhost:~# egrep '((W|w)orld$)' newfile.txt
+Hello world
+hello world
+Linux is best in this World
+```
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+```
+localhost:~# egrep '[1-9]' newfile.txt
+Linux is world number 1
+```
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
+localhost:~# egrep 'Linux.*world' newfile.txt
+Linux is world number 1
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
+```
+localhost:~# egrep 'Linux.*World' newfile.txt
+Linux is best in this World
+```
 
 
 egrep l{2} newfile
 ## OUTPUT
-
+```
+localhost:~# egrep l{2} newfile.txt
+Hello world
+hello world
+```
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+```
+localhost:~# egrep 's{1,2}' newfile.txt
+Linux is world number 1
+Unix is predecessor
+Linux is best in this World
+```
 
 cat > file23
 ```
@@ -292,23 +323,38 @@ cat > file23
 1004 | Sit |  7000 | Dev
 1003 | Joe |  7000 | Developer
 1001 | Ram | 10000 | HR
-^d
 ```
 
 
 sed -n -e '3p' file23
 ## OUTPUT
 
-
+```
+localhost:~# sed -n -e '3p' file23.txt
+1002 | tom |  5000 | Admin
+```
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+```
+localhost:~# sed -n -e '$p' file23.txt
+1001 | Ram | 10000 | HR
+```
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-
+```
+localhost:~# sed -e 's/Ram/Sita/' file23.txt
+1001 | Sita | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Sita | 10000 | HR
+```
 
 
 sed  -e '2s/Ram/Sita/' file23
