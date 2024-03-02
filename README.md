@@ -517,7 +517,14 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+```
+localhost:~# sort file21.txt
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1004 | Sit |  7000 | Dev
+1005 | Sam |  5000 | HR
+```
 
 cat > file22
 ```
@@ -530,7 +537,14 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
+```
+localhost:~# uniq file22.txt
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+```
 
 
 #Using tr command
