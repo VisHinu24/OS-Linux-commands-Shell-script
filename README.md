@@ -599,7 +599,17 @@ www.mrcet.com
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+```
+localhost:~# tar -cvf backup.tar *
+bench.py
+file21.txt
+file22.txt
+file23.txt
+hello.c
+hello.js
+readme.txt
 
+```
 
 mkdir backupdir
  
@@ -607,11 +617,32 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
+```
+localhost:~# tar -tvf backup.tar
+-rw-r--r-- root/root       114 2020-07-05 23:17:07 bench.py
+-rw------- 1000/root       136 2024-03-02 08:54:26 file21.txt
+-rw------- 1000/root       161 2024-03-02 08:56:44 file22.txt
+-rw------- 1000/root       218 2024-03-02 08:13:43 file23.txt
+-rw-r--r-- root/root        76 2020-07-03 14:45:56 hello.c
+-rw-r--r-- root/root        22 2020-06-26 14:57:33 hello.js
+-rw-r--r-- root/root       151 2020-07-05 23:19:13 readme.txt
+-rw------- 1000/root        53 2024-03-02 09:22:36 urllist.txt
 
+```
 
 tar -xvf backup.tar
 ## OUTPUT
-
+```
+localhost:~# tar -xvf backup.tar
+bench.py
+file21.txt
+file22.txt
+file23.txt
+hello.c
+hello.js
+readme.txt
+urllist.txt
+```
 gzip backup.tar
 
 ls .gz
