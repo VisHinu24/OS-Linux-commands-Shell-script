@@ -551,7 +551,17 @@ localhost:~# uniq file22.txt
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-
+```
+localhost:~# cat file23.txt | tr [:lower:] [:upper:]
+1001 | RAM | 10000 | HR
+1001 | RAM | 10000 | HR
+1002 | TOM |  5000 | ADMIN
+1003 | JOE |  7000 | DEVELOPER
+1005 | SAM |  5000 | HR
+1004 | SIT |  7000 | DEV
+1003 | JOE |  7000 | DEVELOPER
+1001 | RAM | 10000 | HR
+```
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -568,11 +578,22 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
+```
+localhost:~# cat urllist.txt | tr -d ' '
+www.yahoo.com
+www.google.com
+www.mrcet....com
 
+```
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+```
+localhost:~# cat urllist.txt | tr -d ' ' | tr -s '.'
+www.yahoo.com
+www.google.com
+www.mrcet.com
+```
 
 
 #Backup commands
