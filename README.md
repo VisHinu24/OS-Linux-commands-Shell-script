@@ -360,64 +360,154 @@ localhost:~# sed -e 's/Ram/Sita/' file23.txt
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+```
+localhost:~# sed -e '2s/Ram/Sita/' file23.txt
+1001 | Ram | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+```
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+```
+localhost:~# sed -e '/tom/s/5000/6000/' file23.txt
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  6000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+```
 
 sed -n -e '1,5p' file23
 ## OUTPUT
+```
+localhost:~# sed -n -e '1,5p'  file23.txt
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+```
 
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+```
+localhost:~# sed -n -e '2,/Joe/p' file23.txt
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
+```
+localhost:~# sed -n -e '/tom/,/Hoe/p' file23.txt
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
+```
 
 
 seq 10 
 ## OUTPUT
 
-
+```
+localhost:~# seq 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
+```
+localhost:~# seq 10 | sed -n '4,6p'
+4
+5
+6
+```
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+```
+localhost:~# seq 10 | sed -n '2,4p'
+2
+3
+4
+```
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-
+```
+localhost:~# seq 3 | sed '2a hello'
+1
+2
+hello
+3
+```
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+```
+localhost:~# seq 2 | sed '2i hello'
+1
+hello
+2
+```
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+```
+localhost:~# seq 10 | sed '2,9c hello'
+1
+hello
+10
+```
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+```
+localhost:~# sed -n '2,4{s/^/$/;p}' file23.txt
+$1001 | Ram | 10000 | HR
+$1002 | tom |  5000 | Admin
+$1003 | Joe |  7000 | Developer
+```
 
 sed -n '2,4{s/$/*/;p}' file23
-
+## OUtPUT
+```
+localhost:~# sed -n '2,4{s/$/*/;p}' file23.txt
+*001 | Ram | 10000 | HR
+*002 | tom |  5000 | Admin
+*003 | Joe |  7000 | Developer
+```
 
 #Sorting File content
 cat > file21
