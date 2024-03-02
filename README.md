@@ -414,13 +414,10 @@ localhost:~# sed -n -e '2,/Joe/p' file23.txt
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 ```
-localhost:~# sed -n -e '/tom/,/Hoe/p' file23.txt
+localhost:~# sed -n -e '/tom/,/Joe/p' file23.txt
 1002 | tom |  5000 | Admin
 1003 | Joe |  7000 | Developer
-1005 | Sam |  5000 | HR
-1004 | Sit |  7000 | Dev
-1003 | Joe |  7000 | Developer
-1001 | Ram | 10000 | HR
+
 ```
 
 
