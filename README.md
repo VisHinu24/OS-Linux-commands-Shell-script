@@ -1,3 +1,5 @@
+## Name : Vishinu H 
+## Reg.No :212223220124
 # OS-Linux-commands-Shell-scripting
 Operating systems Lab exercise
 # Linux commands-Shell scripting
